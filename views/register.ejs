@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrasi & Setup</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Registrasi & Setup Profil</h1>
+    </header>
+
+    <main>
+        <form action="/register" method="POST">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="role">Role dalam Supply Chain:</label>
+            <select id="role" name="role" required>
+                <option value="produsen">Produsen</option>
+                <option value="supplier">Supplier</option>
+                <option value="distributor">Distributor</option>
+                <option value="pengecer">Pengecer</option>
+            </select>
+            
+            <button type="submit">Daftar</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Supply Chain Coffee Business</p>
+    </footer>
+</body>
+</html>
