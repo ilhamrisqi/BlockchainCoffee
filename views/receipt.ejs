@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penerimaan & Verifikasi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Penerimaan & Verifikasi Barang</h1>
+    </header>
+
+    <main>
+        <form action="/receipt" method="POST">
+            <label for="receipt">Verifikasi Penerimaan Barang:</label>
+            <input type="text" id="receipt" name="receipt" required>
+            
+            <button type="submit">Verifikasi</button>
+        </form>
+        <!-- Status verifikasi akan ditampilkan di sini -->
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Supply Chain Coffee Business</p>
+    </footer>
+</body>
+</html>
