@@ -1,0 +1,41 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/Users/ilhamrisqi/CoffeeProduct/hardhat-tutorial/contracts/Smartcoffee.sol": {
+      "lastModificationDate": 1717322266818,
+      "contentHash": "ea7ebf71a08aa273f4a81303d716d5c7",
+      "sourceName": "contracts/Smartcoffee.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "SimpleCoffeeSupplyChain"
+      ]
+    }
+  }
+}
