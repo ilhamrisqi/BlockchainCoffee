@@ -17,22 +17,16 @@ async function main() {
       await deployer.getAddress()
     );
 
-    // const Voting = await ethers.getContractFactory("voting");
-    // const voting = await Voting.deploy();
-  
     const Coffee = await ethers.getContractFactory("Smartcoffee");
     const coffee = await Coffee.deploy();
 
-    //console.log(JSON.stringify(voting));
-    //console.log(voting.target);
-  
     console.log("Coffee smart contract address:", coffee.target);
   
     // We also save the contract's artifacts and address in the frontend directory
     saveFrontendFiles(coffee);
-  }
+}
 
-  function saveFrontendFiles(voting) {
+function saveFrontendFiles(coffee) {
     const fs = require("fs");
     const contractsDir = path.join(__dirname, "..", "src", "contracts");
   
@@ -42,18 +36,18 @@ async function main() {
   
     fs.writeFileSync(
       path.join(contractsDir, "contract-address.json"),
-      JSON.stringify({ Voting: voting.target }, undefined, 2)
+      JSON.stringify({ Coffee: coffee.target }, undefined, 2)
     );
   
-    const VotingArtifact = artifacts.readArtifactSync("voting");
+    const CoffeeArtifact = artifacts.readArtifactSync("Smartcoffee");
   
     fs.writeFileSync(
-      path.join(contractsDir, "Voting.json"),
-      JSON.stringify(VotingArtifact, null, 2)
+      path.join(contractsDir, "Coffee.json"),
+      JSON.stringify(CoffeeArtifact, null, 2)
     );
-  }
+}
   
-  main()
+main()
     .then(() => process.exit(0))
     .catch((error) => {
       console.error(error);
