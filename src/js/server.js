@@ -36,3 +36,30 @@ app.post('/createBatch', async (request, response) => {
     }
 });
 
+app.post('/updateBatchStatus', async (request, response) => {
+    const { batchId, status } = request.body;
+    try {
+        let tx = await Coffee.updateCoffeeBatchStatus(batchId, status);
+        console.log(tx);
+        response.send(`<p id='batchUpdated'>Successfully Updated Coffee Batch ${batchId} to Status: ${status}</p>`);
+    } catch (err) {
+        console.log(err);
+        response.status(500).send("Error updating coffee batch status");
+    }
+});
+
+app.get('/getBatch/:id', async (request, response) => {
+    const batchId = request.params.id;
+    try {
+        let batch = await Coffee.getCoffeeBatch(batchId);
+        console.log(batch);
+        response.json(batch);
+    } catch (err) {
+        console.log(err);
+        response.status(500).send("Error retrieving coffee batch");
+    }
+});
+
+app.listen(3000, async () => {
+    console.log("Server is listening on port 3000");
+});
