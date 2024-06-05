@@ -9,8 +9,7 @@ async function main() {
           " option '--network localhost'"
       );
     }
-  
-    // ethers is available in the global scope
+    
     const [deployer] = await ethers.getSigners();
     console.log(
       "Deploying the contracts with the account:",
@@ -22,7 +21,6 @@ async function main() {
 
     console.log("Coffee smart contract address:", coffee.target);
   
-    // We also save the contract's artifacts and address in the frontend directory
     saveFrontendFiles(coffee);
 }
 
