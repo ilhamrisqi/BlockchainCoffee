@@ -1,6 +1,8 @@
 const { expect } = require("chai");
 const { ethers } = require("hardhat");
 
+// cant run
+
 describe("SmartCoffee", function () {
     it("initializes with two coffee batches", async function (){
         const Coffee = await ethers.getContractFactory("SmartCoffee");
